@@ -3,24 +3,16 @@
 <Document>
 	<name>e2-skrad-severin.kml</name>
 	<open>1</open>
-	<Schema name="tracks" id="tracks">
-		<SimpleField type="string" name="cmt"></SimpleField>
-		<SimpleField type="string" name="desc"></SimpleField>
-		<SimpleField type="string" name="src"></SimpleField>
-		<SimpleField type="string" name="link1_href"></SimpleField>
-		<SimpleField type="string" name="link1_text"></SimpleField>
-		<SimpleField type="string" name="link1_type"></SimpleField>
-		<SimpleField type="string" name="link2_href"></SimpleField>
-		<SimpleField type="string" name="link2_text"></SimpleField>
-		<SimpleField type="string" name="link2_type"></SimpleField>
-		<SimpleField type="int" name="number"></SimpleField>
-		<SimpleField type="string" name="type"></SimpleField>
-		<SimpleField type="string" name="gpxx_TrackExtension"></SimpleField>
-	</Schema>
 		
 	<Style id="track4">
 		<LineStyle>
 		  <color>FF00AA00</color>
+		  <width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="track7">
+		<LineStyle>
+		  <color>ff00aaaa</color>
 		  <width>5</width>
 		</LineStyle>
 	</Style>
@@ -83,11 +75,6 @@
 		<Placemark>
 			<name>Etapa 4: Skrad - Severin na Kupi</name>
 			<styleUrl>#track4</styleUrl>
-			<ExtendedData>
-				<SchemaData schemaUrl="#tracks">
-					<SimpleData name="gpxx_TrackExtension"><![CDATA[<gpxx:DisplayColor>Red</gpxx:DisplayColor>]]></SimpleData>
-				</SchemaData>
-			</ExtendedData>
 			<MultiGeometry>
 				<LineString>
 					<coordinates>
