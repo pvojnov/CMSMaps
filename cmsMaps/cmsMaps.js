@@ -82,6 +82,8 @@ cmsMaps.init = function(options) {
 		// load data
 		if (layerData.type == 'KML'){
 			var kmlLayer = new L.KML(layerData.source, {async: true});
+		} else if (layerData.type == 'GPX'){
+			var kmlLayer = new L.GPX(layerData.source, {async: true});
 		};
 		
 		// add the layer to the map
