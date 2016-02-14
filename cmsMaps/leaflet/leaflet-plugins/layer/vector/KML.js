@@ -139,7 +139,8 @@ L.Util.extend(L.KML, {
 					iconUrl: ioptions.href,
 					shadowUrl: null,
 					iconAnchorRef: {x: ioptions.x, y: ioptions.y},
-					iconAnchorType:	{x: ioptions.xunits, y: ioptions.yunits}
+					iconAnchorType:	{x: ioptions.xunits, y: ioptions.yunits},
+					popupAnchor: [0, -34]
 				});
 			}
 			style['#' + e.getAttribute('id')] = options;
@@ -325,6 +326,7 @@ L.KMLIcon = L.Icon.extend({
 		// save anchor information to the image
 		img.anchor = this.options.iconAnchorRef;
 		img.anchorType = this.options.iconAnchorType;
+		img.popupAnchor = [-100, -100];
 	}
 });
 

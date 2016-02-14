@@ -1,0 +1,69 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" xml:lang="hr" lang="hr">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<head>
+   <title>Josip Žagar biciklistički fanatik</title>
+   
+   <link rel="stylesheet" href="cmsMaps/leaflet/leaflet.css" />
+   <script src="cmsMaps/leaflet/leaflet.js"></script>
+   <!-- <script src="cmsMaps/leaflet/leaflet-min.js"></script> -->
+   <script src="build/cmsMaps-min.js"></script>
+   	
+   <script language="javascript">
+      function init() {
+	  
+		cmsMaps.init({
+			baseLayers: {
+				mapBoxStreets: 'Mapbox streets',
+				mapBoxLight: 'Mapbox light',
+				openStreetMap: 'Open street map',
+				openCycleMap: 'Open Cycle Map',
+				cloudMade: 'CloudMade',
+				MapQuestOpen_OSM: 'Map Quest',
+				OpenStreetMap_BlackAndWhite: 'OpenStreetMap_BlackAndWhite',
+				Hydda_Full: 'Hydda_Full',
+				Thunderforest_Outdoors: 'Thunderforest_Outdoors',
+				OpenMapSurfer_Roads: 'OpenMapSurfer_Roads',
+				Thunderforest_OpenCycleMap: 'Thunderforest_OpenCycleMap',
+				Esri_WorldTopoMap: 'Esri_WorldTopoMap',
+				Esri_DeLorme: 'Esri_DeLorme',
+				googleStreets: 'googleStreets',
+				googleStreetsWithTerain: 'googleStreetsWithTerain',
+				googleHybrid: 'googleHybrid ',
+				googleSat: 'googleSat ',
+				googleTerrain: 'googleTerrain'
+			},
+			overlays: {
+				etapa4: {
+					name: 'Etapa 4',
+					type: 'KML',
+					source: 'biciklisticke_staze.kml',
+					visible: true
+				},
+				etapa5: {
+					name: 'Etapa 7',
+					type: 'KML',
+					source: 'biciklisticke_staze_7.kml',
+					//visible: true
+				},
+				
+				etapa3: {
+					name: 'Etapa 3',
+					type: 'GPX',
+					source: 'biciklisticke_staze_3.gpx',
+					visible: true
+				}
+			}
+		});
+      }
+   </script>
+</head>
+<body onLoad="javascript:init();">
+   <div id="map" style="height: 500px"></div>
+   <!-- Za kartu koja ne ide od ruba do ruba makni širinu -->
+   <!-- <div id="map" style="width: 200px; height: 300px"></div> -->
+   
+</body>            
+</html>
+    
